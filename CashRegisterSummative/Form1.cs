@@ -14,11 +14,15 @@ namespace CashRegisterSummative
 {
     public partial class Form1 : Form
     {
+        //Anouncing Global Constants
+        //item costs
         const double MCBURGER_COST = 6.79;
         const double MCFRIES_COST = 1.79;
         const double MCDRINK_COST = 1.29;
+        //tax percentage
         const double HST_TAX = 0.13;
 
+        //Anouncing Global
         double mcBurgersPurchased;
         double mcFriesPurchased;
         double mcDrinksPurchased;
@@ -91,13 +95,25 @@ namespace CashRegisterSummative
                 tenderedAmount = Convert.ToDouble(tenderedTextBox.Text);
                 changeAmount = tenderedAmount - totalCost;
 
-                beepSoundPlayer.Play();
+                if (changeAmount < 0)
+                {
+                    errorLabel.Visible = true;
 
-                errorLabel.Visible = false;
-                changeLabel.Visible = true;
-                mcPrintButton.Visible = true;
+                    errorSoundPlayer.Play();
+                }
+                else
+                {
+                    
 
-                changeLabel.Text = "Change    " + changeAmount.ToString("C");
+                    beepSoundPlayer.Play();
+
+                    errorLabel.Visible = false;
+                    changeLabel.Visible = true;
+                    mcPrintButton.Visible = true;
+
+                    changeLabel.Text = "Change    " + changeAmount.ToString("C");
+                }
+                
             }
             catch
             {
@@ -118,12 +134,9 @@ namespace CashRegisterSummative
 
             
 
-            for (int i = 0; i < 55; i++)
-            {
-                this.Size = new Size(this.Width - 4, this.Height);
-            }
+            
 
-            printingSoundPlayer.Play();
+            
             titleLabel.Visible = false;
 
             McBurgersLabel.Visible = false;
@@ -149,7 +162,15 @@ namespace CashRegisterSummative
 
             changeLabel.Visible = false;
 
-            //g.Clear(Color.White);
+            for (int i = 0; i < 55; i++)
+            {
+                this.Size = new Size(this.Width - 4, this.Height);
+            }
+
+            printingSoundPlayer.Play();
+
+            g.Clear(Color.White);
+
             g.DrawRectangle(blackPen, 15, 15, 225, 300);
             g.FillRectangle(whiteBrush, 15, 15, 225, 300);
 
@@ -166,20 +187,11 @@ namespace CashRegisterSummative
                 "Have a McTastic Day!", 
                 consolasFont, blackBrush, 25, 40);
 
-            Thread.Sleep(5000);
+            Thread.Sleep(7000);
 
-            newOrderButton.Visible = true;
-
-        }
-
-        private void newOrderButton_Click(object sender, EventArgs e)
-        {
-            Graphics g = this.CreateGraphics();
-
-
-            for (int i = 0; i < 220; i++)
+            for (int i = 0; i < 55; i++)
             {
-                this.Size = new Size(this.Width + 1, this.Height);
+                this.Size = new Size(this.Width + 4, this.Height);
                 this.Refresh();
 
             }
@@ -203,6 +215,15 @@ namespace CashRegisterSummative
             tenderedTextBox.Text = "";
 
             this.Refresh();
+
+        }
+
+        private void newOrderButton_Click(object sender, EventArgs e)
+        {
+            Graphics g = this.CreateGraphics();
+
+
+            
         }
     }
 }
