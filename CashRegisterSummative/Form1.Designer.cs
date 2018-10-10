@@ -47,7 +47,6 @@
             this.mcChangeButton = new System.Windows.Forms.Button();
             this.changeLabel = new System.Windows.Forms.Label();
             this.mcPrintButton = new System.Windows.Forms.Button();
-            this.newOrderButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -252,27 +251,12 @@
             this.mcPrintButton.Visible = false;
             this.mcPrintButton.Click += new System.EventHandler(this.mcPrintButton_Click);
             // 
-            // newOrderButton
-            // 
-            this.newOrderButton.BackColor = System.Drawing.Color.Red;
-            this.newOrderButton.ForeColor = System.Drawing.Color.White;
-            this.newOrderButton.Location = new System.Drawing.Point(57, 305);
-            this.newOrderButton.Margin = new System.Windows.Forms.Padding(2);
-            this.newOrderButton.Name = "newOrderButton";
-            this.newOrderButton.Size = new System.Drawing.Size(133, 24);
-            this.newOrderButton.TabIndex = 19;
-            this.newOrderButton.Text = "New Order";
-            this.newOrderButton.UseVisualStyleBackColor = false;
-            this.newOrderButton.Visible = false;
-            this.newOrderButton.Click += new System.EventHandler(this.newOrderButton_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CashRegisterSummative.Properties.Resources.MacDoonalds;
             this.ClientSize = new System.Drawing.Size(475, 329);
-            this.Controls.Add(this.newOrderButton);
             this.Controls.Add(this.mcPrintButton);
             this.Controls.Add(this.changeLabel);
             this.Controls.Add(this.mcChangeButton);
@@ -295,7 +279,6 @@
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "Form1";
             this.Text = "MacDoonald\'s Cash Register";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,7 +304,6 @@
         private System.Windows.Forms.Button mcChangeButton;
         private System.Windows.Forms.Label changeLabel;
         private System.Windows.Forms.Button mcPrintButton;
-        private System.Windows.Forms.Button newOrderButton;
     }
 }
 
