@@ -10,6 +10,17 @@ using System.Windows.Forms;
 using System.Media;
 using System.Threading;
 
+/*
+Created By: Deo Narayan
+Date: October 15, 2018
+Description: This is a program for a Cash Register which takes in the number of
+items purchased and the tendered amount and calculates the cost of the purchase,
+as well as the change the customer should receive. After, when prompted, the
+program simulates the printing of the receipt. Once the user has been given
+enough time to view the receipt, the program transforms into its original state,
+ready for a new order.
+*/
+
 namespace CashRegisterSummative
 {
     public partial class Form1 : Form
@@ -189,7 +200,7 @@ namespace CashRegisterSummative
             //draws receipt border
             g.DrawRectangle(blackPen, 15, 15, 225, 300);
             g.FillRectangle(whiteBrush, 15, 15, 225, 300);
-
+            //REMOVE LATER - keep black rectangle
             //Draws the receipt
             g.DrawString("     MacDoonalds Inc.", consolasFont, blackBrush, 25, 40);
 
