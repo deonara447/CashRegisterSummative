@@ -191,19 +191,31 @@ namespace CashRegisterSummative
             g.FillRectangle(whiteBrush, 15, 15, 225, 300);
 
             //Draws the receipt
-            g.DrawString("     MacDoonalds Inc." + "\n" + "\n" +
-                "Order Number 02496" + "\n" +
-                "October 15, 2018" + "\n" + "\n" +
-                "McHamburgers  x" + mcBurgersPurchased.ToString("#") + " \t@ 6.79" + "\n" + 
-                "McFries       x" + mcFriesPurchased.ToString("#") + " \t@ 1.79" + "\n" +
-                "McDrinks      x" + mcDrinksPurchased.ToString("#") + " \t@ 1.29" + "\n" + "\n" +
-                "Sub Total        " + subTotalCost.ToString("C") + "\n" +
-                "Tax              " + taxCost.ToString("C") + "\n" +
-                "Total            " + totalCost.ToString("C") + "\n" + "\n" +
-                "Tendered         " + tenderedAmount.ToString("C") + "\n" +
-                "Change           " + changeAmount.ToString("C") + "\n" + "\n" +
-                "Have a McTastic Day!", 
-                consolasFont, blackBrush, 25, 40);
+            g.DrawString("     MacDoonalds Inc.", consolasFont, blackBrush, 25, 40);
+
+            g.DrawString("Order Number 02496", consolasFont, blackBrush, 25, 72);
+
+            g.DrawString("October 15, 2018", consolasFont, blackBrush, 25, 88);
+
+            g.DrawString("McHamburgers  x" + mcBurgersPurchased.ToString("#") + " \t@ 6.79", consolasFont, blackBrush, 25, 120);
+
+            g.DrawString("McFries       x" + mcFriesPurchased.ToString("#") + " \t@ 1.79", consolasFont, blackBrush, 25, 136);
+
+            g.DrawString("McDrinks      x" + mcDrinksPurchased.ToString("#") + " \t@ 1.29", consolasFont, blackBrush, 25, 152);
+
+            g.DrawString("Sub Total        " + subTotalCost.ToString("C"), consolasFont, blackBrush, 25, 184);
+
+            g.DrawString("Tax              " + taxCost.ToString("C"), consolasFont, blackBrush, 25, 200);
+
+            g.DrawString("Total            " + totalCost.ToString("C"), consolasFont, blackBrush, 25, 216);
+
+            g.DrawString("Tendered         " + tenderedAmount.ToString("C"), consolasFont, blackBrush, 25, 248);
+
+            g.DrawString("Change           " + changeAmount.ToString("C"), consolasFont, blackBrush, 25, 264);
+
+            g.DrawString("Have a McTastic Day!", consolasFont, blackBrush, 25, 296);
+
+
 
             //pause so user can read
             Thread.Sleep(7000);
