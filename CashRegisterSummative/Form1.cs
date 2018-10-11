@@ -35,9 +35,9 @@ namespace CashRegisterSummative
 
         //Anouncing Global Variables
         //representing the number of each item purchased
-        double mcBurgersPurchased;
-        double mcFriesPurchased;
-        double mcDrinksPurchased;
+        double mcBurgersPurchased = 0;
+        double mcFriesPurchased = 0;
+        double mcDrinksPurchased = 0;
         //representing the cost of the purchase
         double subTotalCost;
         double taxCost;
@@ -55,8 +55,6 @@ namespace CashRegisterSummative
         //played when 'McPrint' button is pressed to represent the printing of the receipt
         SoundPlayer printingSoundPlayer = new SoundPlayer(Properties.Resources.printingSound);
 
-        //initialize variables to 0???fe;oeno3b34ohfoi fb3xp3u3ixo2bu3oxrbuoi'rbuxorbubu23bu32bpooxb32pubx3op2xbuop'32burbr3obux32o'b32'xbux32obr'32bur'pb32o'bo'pr32xqbuu
-
         public Form1()
         {
             InitializeComponent();
@@ -64,6 +62,22 @@ namespace CashRegisterSummative
 
         private void mcTotalButton_Click(object sender, EventArgs e)
         {
+
+            if (McBurgersTextBox.Text == "")
+            {
+                McBurgersTextBox.Text = "0";
+            }
+
+            if (McDrinksTextBox.Text == "")
+            {
+                McDrinksTextBox.Text = "0";
+            }
+
+            if (McFriesTextBox.Text == "")
+            {
+                McFriesTextBox.Text = "0";
+            }
+
             //Try-Catch (so sytem does not crash if input is not a number)
             try
             {
@@ -200,7 +214,7 @@ namespace CashRegisterSummative
             //draws receipt border
             g.DrawRectangle(blackPen, 15, 15, 225, 300);
             g.FillRectangle(whiteBrush, 15, 15, 225, 300);
-            //REMOVE LATER - keep black rectangle
+
             //Draws the receipt
             g.DrawString("     MacDoonalds Inc.", consolasFont, blackBrush, 25, 40);
 
@@ -276,6 +290,11 @@ namespace CashRegisterSummative
             McFriesTextBox.Text = "";
             McDrinksTextBox.Text = "";
             tenderedTextBox.Text = "";
+
+            mcBurgersPurchased = 0;
+            mcDrinksPurchased = 0;
+            mcFriesPurchased = 0;
+
         }
     }
 }
