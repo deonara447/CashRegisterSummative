@@ -204,32 +204,54 @@ namespace CashRegisterSummative
             //Draws the receipt
             g.DrawString("     MacDoonalds Inc.", consolasFont, blackBrush, 25, 40);
 
+            Thread.Sleep(500);
+
             g.DrawString("Order Number 02496", consolasFont, blackBrush, 25, 72);
+
+            Thread.Sleep(500);
 
             g.DrawString("October 15, 2018", consolasFont, blackBrush, 25, 88);
 
+            Thread.Sleep(500);
+
             g.DrawString("McHamburgers  x" + mcBurgersPurchased.ToString("#") + " \t@ 6.79", consolasFont, blackBrush, 25, 120);
+
+            Thread.Sleep(500);
 
             g.DrawString("McFries       x" + mcFriesPurchased.ToString("#") + " \t@ 1.79", consolasFont, blackBrush, 25, 136);
 
+            Thread.Sleep(500);
+
             g.DrawString("McDrinks      x" + mcDrinksPurchased.ToString("#") + " \t@ 1.29", consolasFont, blackBrush, 25, 152);
+
+            Thread.Sleep(500);
 
             g.DrawString("Sub Total        " + subTotalCost.ToString("C"), consolasFont, blackBrush, 25, 184);
 
+            Thread.Sleep(500);
+
             g.DrawString("Tax              " + taxCost.ToString("C"), consolasFont, blackBrush, 25, 200);
+
+            Thread.Sleep(500);
 
             g.DrawString("Total            " + totalCost.ToString("C"), consolasFont, blackBrush, 25, 216);
 
+            Thread.Sleep(500);
+
             g.DrawString("Tendered         " + tenderedAmount.ToString("C"), consolasFont, blackBrush, 25, 248);
 
+            Thread.Sleep(500);
+
             g.DrawString("Change           " + changeAmount.ToString("C"), consolasFont, blackBrush, 25, 264);
+
+            Thread.Sleep(500);
 
             g.DrawString("Have a McTastic Day!", consolasFont, blackBrush, 25, 296);
 
 
 
             //pause so user can read
-            Thread.Sleep(7000);
+            Thread.Sleep(5000);
 
             //Form Size Changes
             //form gradually returns to original size while constantly refreshing the form
