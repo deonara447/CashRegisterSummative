@@ -62,7 +62,7 @@ namespace CashRegisterSummative
 
         private void mcTotalButton_Click(object sender, EventArgs e)
         {
-
+            //so that if nothing is put in the textboxes the program assumes the value to be zero
             if (McBurgersTextBox.Text == "")
             {
                 McBurgersTextBox.Text = "0";
